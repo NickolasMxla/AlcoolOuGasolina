@@ -22,13 +22,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         Log.d("PDM23", "No onCreate, $percentual")
 
-        // Inicialize as views
+        // Inicializar views
         edAlcool = findViewById(R.id.edAlcool)
         edGasolina = findViewById(R.id.edGasolina)
         swPercentual = findViewById(R.id.swPercentual)
         btCalc = findViewById(R.id.btCalcular)
 
-        // Recupere o valor do percentual se estiver disponível
+        // Recuperar o percentual
         if (savedInstanceState != null) {
             percentual = savedInstanceState.getDouble("percentual")
             swPercentual.isChecked = percentual == 0.75
